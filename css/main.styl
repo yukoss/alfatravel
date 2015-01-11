@@ -1,0 +1,634 @@
+@import "../../../reset_css/normalize.styl"
+
+/*========================================================*/
+
+@font-face
+  font-family "Open Sans Bold"
+  src url(../fonts/OpenSans-Bold.ttf)
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family "Open Sans Light"
+  src url(../fonts/OpenSans-Light.ttf)
+  font-weight: normal
+  font-style: normal
+
+
+/*========================================================*/
+
+$font-size = ()
+$font-l = ($font-size) "Open Sans Light"
+$font-b = ($font-size) "Open Sans Bold"
+$mark-1 = #d2585f
+$mark-2 = #f5e525
+$color-1 = #1c1d27
+
+
+border-r(r)
+  -webkit-border-radius r
+  -moz-border-radius r
+  border-radius r
+
+btn($w-btn, $h-btn, $bg-btn, $bs-btn)
+  width $w-btn
+  height $h-btn
+  background $bg-btn
+  box-shadow $bs-btn
+  border-radius (6px)
+  border none
+  font bold 15px $font-b
+  color #fff
+
+transformation($argument)
+  -webkit-transform ($argument)
+  -moz-transform ($argument)
+  -o-transform ($argument)
+  -ms-transform ($argument)
+  transform ($argument)
+
+/*========================================================*/
+*
+  box-sizing border-box
+
+body
+  font-family "Open Sans Light"
+  color #fff
+
+div, header, h1, h2, h3, h4, h5, h6, p, section, ul, ol, li
+  margin 0
+  padding 0
+
+a
+  color #fff
+  text-decoration none
+
+:focus
+  outline none
+
+h2
+  font 33px $font-b
+/*============================WRAPPER============================*/
+
+.wrapper
+  margin 0 auto
+  max-width 986px
+  height 100%
+
+.content-wrapper
+  margin 0 auto
+  width 1120px
+  text-align center
+
+.span-b
+  font-weight bold
+
+.span-n
+  font-weight normal
+
+.mark-1
+  background $mark-1
+
+.mark-2
+  background $mark-2
+
+
+/*============================HEADER============================*/
+
+header
+  top 0
+  left 0
+  width 100%
+  height 91px
+  background url(../images/bg-1.png)
+
+.logo
+  margin 30px 56px 0 0
+  font 30px $font-l
+  float left
+  img
+    margin-right 9px
+
+.call-btn
+  position relative
+  margin 21px 0
+  btn(167px, 51px, #e35353, inset 0 -6px #c74848)
+  &:active
+    top 5px
+    box-shadow none
+
+.nav
+  margin 26px 55px 0 25px
+  list-style url(../images/list-style-ii.png)
+  color #fff
+  float left
+  font-size 13px
+  span
+    font 12px
+
+.contacts
+  margin 29px 0
+  width 215px
+  font 20px
+  color #fff
+  float left
+  text-align right
+  line-height 20px
+  span
+    font-size 26px
+    font-weight bold
+  .call
+    font-size 12px
+    color #9c9ca1
+
+.or
+  margin 0 15px
+  color #63636d
+
+
+/*============================CONTENT============================*/
+input
+  margin-bottom 10px
+  padding-left 25px
+  width 273px
+  height 55px
+  background #afb0c2
+  border-r(5px)
+  border none
+  &:focus
+    background rgba(0, 0, 0, 0.5)
+    transform scale(1.2)
+
+input::-webkit-input-placeholder
+  font-size: 20px
+  color: #525360
+
+input:-moz-placeholder
+  font-size: 20px
+  color: #525360
+
+fieldset
+  border none
+
+legend
+  margin-bottom 20px
+  width 300px
+  font 23px $font-b
+  line-height 30px
+
+
+/*--------------Top Section----------------*/
+.content-top
+  padding 40px 0 38px
+  width 100%
+  height 100%
+  background url(../images/bg-img-1.jpg) no-repeat fixed
+  background-size cover
+  form
+    position relative
+    margin-left 600px
+    padding 30px 0
+    right 0
+    width 360px
+    height 422px
+    background #14174e
+    opacity 0.95
+    border-r(6px)
+    line-height 20px
+    text-align center
+
+.content-item
+  width 500px
+  float left
+  h1, h2
+    font-family $font-b
+  h1
+    font-size 36px
+  h2
+    font-size 32px
+    .normal
+      font normal 32px $font-l
+
+.show-mark-info
+  background #f5e525
+  color #1c1d27
+
+
+.link
+  padding 25px 30px 20px 30px
+  border 1px solid #fff
+  border-r(6px)
+  font-size 18px
+  font-weight bold
+  &:hover
+    background rgba(255, 255, 255, 0.2)
+  &:active
+    background #ccc
+
+.form-btn
+  position relative
+  margin-top 15px
+  btn(273px, 66px, #f5e525, inset 0 -6px #d2c30d)
+  font-size 19px
+  font-weight bold
+  color #1c1d27
+  &:active
+    top 6px
+    box-shadow none
+
+.content-list
+  margin 30px 0 70px
+  padding-left  25px
+  width 400px
+  font-size 25px
+
+.pre-footer
+  h1
+    font 30px $font-l
+    line-height 60px
+    span
+      font 35px $font-b
+      & .mark-2
+        padding 10px
+        color $color-1
+  p
+    margin-top 50px
+    width 380px
+    font-size 22px
+
+
+/*---------------Proposition Section---------------*/
+
+.content-proposition
+  padding-top 80px
+  height 716px
+  background url(../images/bg-1.png)
+  h1
+    font 33px $font-b
+    line-height 30px
+    text-align center
+    span
+      font 28px $font-l
+
+.slider
+  position relative
+  .prev
+    &:after
+      content url(../images/prev.png)
+      position absolute
+      top 25%
+      left 0
+    &:hover
+      cursor pointer
+      top 20px
+    &:active
+      left 10px
+  .next
+    &:after
+      content url(../images/next.png)
+      position absolute
+      top 25%
+      right 0
+    &:hover
+      cursor pointer
+      top 10px
+    &:active
+      right 10px
+
+.slider-item
+  margin-top 80px
+  p
+    height 44px
+    font 16px $font-b
+  li
+    display inline-block
+    padding-bottom 23px
+    width 263px
+    height 355px
+    border 4px solid rgba(255, 255, 255, 0.2)
+    line-height 0
+    text-align center
+    overflow hidden
+    border-r(10px)
+    &:nth-child(2n+1)
+      margin 0 40px
+    img
+      margin-bottom 25px
+    a
+      display block
+      position relative
+      margin 10px 45px
+      padding 12px
+      btn(166px, 53px, #f5e525, inset 0 -6px #d2c30d)
+      font-size 18px
+      font-weight bold
+      color #1c1d27
+      &:active
+        top 6px
+        box-shadow none
+
+.price
+  font 25px $font-b
+  color $mark-1
+
+.days
+  font-size 17px
+
+/*---------------Consultation Section---------------*/
+
+.content-consultation
+  padding-top 88px
+  height 541px
+  background url(../images/bg-img-2.jpg) no-repeat fixed
+  background-size cover
+
+
+.b-ask
+.b-answer
+  position relative
+  h3
+    display inline
+    padding 5px 15px
+    font 35px $font-b
+
+.b-ask
+  float left
+  h3
+    background  $mark-1
+  &:after
+    content url(../images/arrow.png)
+    position absolute
+    left 25%
+    margin -15px 0 0
+
+.b-answer
+  float right
+  h3
+    background $mark-2
+    color $color-1
+  p
+    margin-top 30px
+    transform rotate(5deg)
+  a
+    display block
+    position relative
+    margin-top 20px
+    padding-top 25px
+    btn(227px, 73px, #f5e525, inset 0 -6px #d2c30d)
+    transform rotate(5deg)
+    box-sizing border-box
+    font 19px $font-b
+    color $color-1
+    transition 0.2s
+    &:active
+      top 6px
+  &:after
+    content url(../images/arrow.png)
+    position absolute
+    right 25%
+    margin -15px 0 0
+    transform matrix(-1, 0, 0, 1, 0, 0)
+
+.b-ask-item
+.b-answer-item
+  margin-top 40px
+  width 560px
+  height 270px
+  background rgba(20, 23, 78, 0.8)
+  border-radius 280px / 135px
+  &::after
+    width 140px
+    height 70px
+    border-left 50px solid transparent
+    border-right 50px solid transparent
+    border-top 100px solid #14174e
+
+.b-ask-item
+  transform rotate(5deg)
+
+.asks
+  position relative
+  padding 70px 0 0
+  transform rotate(-5deg)
+  span
+    position absolute
+    padding 10px
+    font 12px $font-b
+    border 1px solid #fff
+    border-r(6px)
+    &:nth-child(7n+1)
+      top 50px
+      left 70px
+    &:nth-child(5n+2)
+      top 60px
+      left 320px
+      transform rotate(5deg)
+    &:nth-child(4n+3)
+      top 100px
+      left 200px
+      transform rotate(3deg)
+    &:nth-child(3n+4)
+      top 150px
+      left 330px
+      transform rotate(-2deg)
+    &:nth-child(2n+5)
+      top 130px
+      left 100px
+      transform rotate(2deg)
+    &:nth-child(1n+6)
+      top 180px
+      left 200px
+      transform rotate(-3deg)
+
+
+.b-answer-item
+  padding 20px 160px
+  transform rotate(-5deg)
+
+
+/*---------------Why We Section---------------*/
+
+.content-why_we
+  padding 90px 0 25px
+  background url(../images/bg-2.png)
+  color $color-1
+  text-align center
+  h2, span
+    font-family $font-b
+  h2
+    font-size 33px
+  .privil
+    display block
+    margin-top -35px
+    margin-left 315px
+    width 352px
+    height 117px
+    background url(../images/bg-item.png) no-repeat
+    font-size 26px
+    span
+      display block
+      padding-top 45px
+      transform rotate(-5deg)
+
+.why_me-list
+  margin 25px 0
+  li
+    display inline-block
+    position relative
+    margin-bottom 50px
+    width 460px
+    height 146px
+    text-align left
+    overflow hidden
+    transition 0.5s
+    &:nth-child(2n+1)
+      margin-right 60px
+    &:hover:nth-child(2n+1)
+      transform scale(1.2) rotate(5deg)
+      z-index 2
+    &:hover:nth-child(2n+2)
+      transform scale(1.2) rotate(-5deg)
+      z-index 2
+    h4
+      font 20px $font-b
+    p
+      font-size 15px
+      font-weight bold
+    span
+      display block
+      margin-right 28px
+      width 142px
+      height 142px
+      background-color $mark-1
+      border-r(7px)
+      box-shadow 6px 4px rgba(1, 1, 1, 0.2)
+      float left
+
+.user
+  background url(../images/user-group.png) no-repeat 50% 50%
+
+.glass
+  background url(../images/mygnifying-glass.png) no-repeat 50% 50%
+
+.bullets
+  background url(../images/bullets.png) no-repeat 50% 50%
+
+.smile
+  background url(../images/smile.png) no-repeat 50% 50%
+
+/*---------------Present Section---------------*/
+.present
+  padding 90px 0
+  background url(../images/bg-3.png)
+  height 100%
+  text-align center
+  h2
+    span
+      font 28px $font-l
+  h3
+    font 23px $font-b
+    &+span
+      display block
+      margin 15px 0 30px
+      font-size 18px
+
+.present-img
+  margin 60px 0 50px
+  padding-top 10px
+  width 100%
+  overflow hidden
+  li
+    display inline-block
+    margin-right 15px
+    width 230px
+    height 150px
+    transition 0.2s
+    &:first-child
+      margin-left -20%
+    &:last-child
+      margin-right -20%
+    &:nth-child(2n+1)
+      transform rotate(-5deg)
+      &:hover
+        transform rotate(0deg)
+        z-index 2
+    &:nth-child(2n+2)
+      transform rotate(5deg)
+      &:hover
+        transform rotate(0deg)
+
+.present-list
+  margin-right 50px
+  list-style none
+  font-size 17px
+  text-align left
+  float left
+  li
+    margin-bottom 15px
+    padding 40px 70px
+    width 592px
+    height 256px
+    background url(../images/border-img.png) no-repeat
+
+.b-form
+  padding 20px 0
+
+/*---------------Reviews Section---------------*/
+.content-reviews
+  padding 83px 0 103px
+  background url(../images/bg-1.png)
+  text-align center
+  p
+    font-size 28px
+
+.content-reviews-list
+  margin-top 80px
+  text-align left
+  p
+    margin-top 20px
+    font-size 16px
+    overflow hidden
+  li
+    display inline-block
+    margin-bottom 80px
+    width 450px
+    height 100%
+    overflow hidden
+    vertical-align top
+    &:nth-child(2n+1)
+      margin-right 30px
+
+  img
+    margin-right 30px
+    float left
+
+
+/*--------------Show Section----------------*/
+.content-show
+  padding-top 147px
+  height 463px
+  background url(../images/bg-img-3.jpg) no-repeat fixed
+  background-size cover
+  p
+    width 668px
+    line-height 70px
+    font-size 33px
+
+.show, .show-pre
+  font-family $font-b
+
+.show
+  font-size 41px
+
+.show-pre
+  font-size 30px
+
+.show-p
+  padding 10px
+
+/*============================FOOTER============================*/
+
+footer
+  padding-top 15px
+  height 118px
+  background url(../images/bg-1.png)
